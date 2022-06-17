@@ -1,7 +1,10 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Seventy1Logo from "../images/logo.svg";
+import { ROUTES } from "../routes";
 import { THEME } from "../styles/theme";
+import { CustomNavLink } from "./CustomNavLink";
 
 const StyledHeader = styled.section`
   background-color: ${THEME.colors.bgDark};
@@ -19,11 +22,23 @@ const SiteHeader = () => {
       <div className="wrapper">
         <div className="left">
           <div className="logo">
-            <img src={Seventy1Logo} alt="logo" />
+            <Link to="/">
+              <img src={Seventy1Logo} alt="logo" />
+            </Link>
           </div>
         </div>
 
-        <div className="right"></div>
+        <div className="right">
+          <nav>
+            <ul>
+              {ROUTES.map((link) => (
+                <li>
+                  <CustomNavLink linkTo={link.to} linkName={link.name} />
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     </StyledHeader>
   );

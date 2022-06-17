@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import { Footer } from "./components/footer";
 import { SiteHeader } from "./components/header";
 
 function App() {
   return (
     <div className="App">
       <SiteHeader />
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-        deleniti, deserunt velit eaque similique, dolor, sunt ea nesciunt
-        exercitationem dolorum cumque fugit sed temporibus. Tempora voluptatem
-        iusto doloribus nihil quasi.
-      </p>
+
+      <main>
+        <Outlet />
+      </main>
+
+      <Footer />
     </div>
   );
 }
