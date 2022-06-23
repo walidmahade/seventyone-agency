@@ -1,25 +1,16 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import styled from "styled-components";
-import Seventy1Logo from "../images/logo.svg";
-import { ROUTES } from "../routes";
-import { THEME } from "../styles/theme";
+import Seventy1Logo from "../../images/logo.svg";
+import { ROUTES } from "../../routes";
 import { CustomNavLink } from "./CustomNavLink";
-
-const StyledHeader = styled.section`
-  background-color: ${THEME.colors.bgDark};
-
-  .wrapper {
-    max-width: 1280px;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-`;
+import { Button } from "../Button/button";
+import { StyledHeader } from "./styles";
+import { Wrapper } from "../Wrapper/wrapper";
 
 const SiteHeader = () => {
   return (
     <StyledHeader>
-      <div className="wrapper">
+      <Wrapper>
         <div className="left">
           <div className="logo">
             <Link to="/">
@@ -32,14 +23,17 @@ const SiteHeader = () => {
           <nav>
             <ul>
               {ROUTES.map((link) => (
-                <li>
+                <li key={link.to}>
                   <CustomNavLink linkTo={link.to} linkName={link.name} />
                 </li>
               ))}
+              <li>
+                <Button to="contact" name="Contact" variant="normal" />
+              </li>
             </ul>
           </nav>
         </div>
-      </div>
+      </Wrapper>
     </StyledHeader>
   );
 };

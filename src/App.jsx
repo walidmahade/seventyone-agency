@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { Footer } from "./components/footer";
-import { SiteHeader } from "./components/header";
+import { SiteHeader } from "./components/Header/header";
 
 function App() {
   return (

@@ -11,8 +11,4 @@ export const ROUTES = [
     to: "service",
     name: "Services",
   },
-  {
-    to: "contact",
-    name: "Contact",
-  },
 ];
