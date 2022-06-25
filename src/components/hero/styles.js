@@ -18,36 +18,13 @@ export const StyledHero = styled.section`
     margin-bottom: 40px;
   }
 
-  .title {
-    font-family: "Jost";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 52px;
+  .h1 {
     color: ${THEME.colors.textLight};
     max-width: 1130px;
     margin: 0 auto 30px auto;
-
-    ${media.up("md")} {
-      font-size: 55px;
-      line-height: 65px;
-    }
-
-    ${media.up("lg")} {
-      font-size: 80px;
-      line-height: 98px;
-      margin: 0 auto 60px auto;
-    }
   }
 
   .description {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.68px;
-    color: ${THEME.colors.textLight};
     max-width: 700px;
     margin: 0 auto 30px auto;
 

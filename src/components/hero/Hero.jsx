@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Button } from "../Button/button";
 import { Wrapper } from "../Wrapper/wrapper";
 import { StyledHero } from "./styles";
+import { Title } from "../title/title";
+import Description from "../Description/Description";
 
 export const Hero = (props) => {
   // console.log(props);
@@ -14,9 +16,21 @@ export const Hero = (props) => {
         <div>
           {subtitle ? <h3 className="subtitle">{subtitle}</h3> : ""}
 
-          {title ? <h1 className="title">{title}</h1> : ""}
+          {title ? (
+            <Title tag={"h1"} className="h1">
+              {title}
+            </Title>
+          ) : (
+            ""
+          )}
 
-          {description ? <p className="description">{description}</p> : ""}
+          {description ? (
+            <Description className="description text-light">
+              <p>{description}</p>
+            </Description>
+          ) : (
+            ""
+          )}
 
           <div className="cta">
             {buttons.map((button, i) => (

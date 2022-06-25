@@ -13,6 +13,11 @@ body {
   font-family: ${THEME.fonts.body};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: ${THEME.colors.text};
+}
+
+h1,h2,h3,h5,h4,h6 {
+  font-family: ${THEME.fonts.heading};
 }
 
 code {
@@ -71,5 +76,16 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+/* --- helper classes ---*/
+.text-light {
+  color: ${THEME.colors.textLight};
+}
+.text-dark {
+  color: ${THEME.colors.text};
+}
+.text-para {
+  color: ${THEME.colors.paragraph};
 }
 `;
