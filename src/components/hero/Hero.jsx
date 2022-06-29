@@ -8,7 +8,14 @@ import Description from "../Description/Description";
 
 export const Hero = (props) => {
   // console.log(props);
-  const { title, subtitle, description, buttons } = props;
+  const {
+    title,
+    titleTag = "h1",
+    titleClass = "h1",
+    subtitle,
+    description,
+    buttons,
+  } = props;
 
   return (
     <StyledHero>
@@ -17,7 +24,7 @@ export const Hero = (props) => {
           {subtitle ? <h3 className="subtitle">{subtitle}</h3> : ""}
 
           {title ? (
-            <Title tag={"h1"} className="h1">
+            <Title tag={titleTag} className={titleClass}>
               {title}
             </Title>
           ) : (

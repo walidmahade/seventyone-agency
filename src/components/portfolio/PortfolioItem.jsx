@@ -1,13 +1,18 @@
 import React from "react";
-import Portfolio1 from "../../images/portfolio/porfolio-1.jpg";
 import { Title } from "../title/title";
 import Description from "../Description/Description";
 import styled from "styled-components";
+import { media } from "../../styles/responsive";
 
 const StyledPortfolio = styled.article`
   .h3 {
-    margin-top: 60px;
-    margin-bottom: 14px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    ${media.up("lg")} {
+      margin-top: 60px;
+      margin-bottom: 14px;
+    }
   }
 `;
 

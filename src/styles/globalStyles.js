@@ -78,6 +78,10 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+ul,li {
+  list-style: none;
+}
+
 /* --- helper classes ---*/
 .text-light {
   color: ${THEME.colors.textLight};

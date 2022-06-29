@@ -8,6 +8,7 @@ import Portfolio2 from "../../images/portfolio/porfolio-2.jpg";
 import Portfolio3 from "../../images/portfolio/porfolio-3.jpg";
 import Portfolio4 from "../../images/portfolio/porfolio-4.jpg";
 import PortfolioItem from "./PortfolioItem";
+import TextLink from "../TextLink/TextLink";
 
 export const Portfolio = () => {
   return (
@@ -18,7 +19,7 @@ export const Portfolio = () => {
             The work we do, and the people we help.
           </Title>
 
-          <Description className="description text-para">
+          <Description className="description">
             <p>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -56,6 +57,8 @@ export const Portfolio = () => {
               "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
             }
           />
+
+          <TextLink linkTo={"/work"} name={"View All Projects"} />
         </div>
       </Wrapper>
     </StyledPortfolio>

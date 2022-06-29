@@ -2,7 +2,6 @@ import React from "react";
 import { StyledTitle } from "./styles";
 
 export const Title = (props) => {
-  console.log(props);
   const { tag, className, children } = props;
 
   return (

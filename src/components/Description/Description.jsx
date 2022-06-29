@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { THEME } from "../../styles/theme";
-// import { media } from "../../styles/responsive";
+import { THEME } from "../../styles/theme";
 
 const StyledDescription = styled.div`
   font-style: normal;
@@ -9,6 +8,7 @@ const StyledDescription = styled.div`
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.68px;
+  color: ${THEME.colors.paragraph};
 
   p {
     font-style: normal;

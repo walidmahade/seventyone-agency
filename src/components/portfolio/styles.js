@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import { media } from "../../styles/responsive";
 
 export const StyledPortfolio = styled.section`
-  padding: 160px 0 80px 0;
+  padding: 80px 0 80px 0;
+
+  ${media.up("lg")} {
+    padding: 160px 0 80px 0;
+  }
 
   .portfolio-inner {
     width: 100%;
@@ -22,10 +27,27 @@ export const StyledPortfolio = styled.section`
     column-gap: 100px;
 
     article {
-      width: calc(50% - 50px);
+      width: 100%;
+      margin-bottom: 80px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      ${media.up("lg")} {
+        width: calc(50% - 50px);
+        margin-bottom: 0;
+      }
 
       &:nth-child(even) {
-        margin-top: 200px;
+        ${media.up("lg")} {
+          margin-top: 200px;
+        }
+      }
+
+      img {
+        width: 100%;
+        margin: 0;
       }
     }
   }

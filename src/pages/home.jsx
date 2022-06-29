@@ -1,6 +1,7 @@
 import React from "react";
 import { Hero } from "../components/hero/Hero";
 import { Portfolio } from "../components/portfolio/portfolio";
+import AboutUs from "../components/about-us/AboutUs";
 
 export const Home = () => (
   <div>
@@ -24,5 +25,7 @@ export const Home = () => (
     />
 
     <Portfolio />
+
+    <AboutUs />
   </div>
 );
