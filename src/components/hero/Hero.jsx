@@ -40,7 +40,7 @@ export const Hero = (props) => {
           )}
 
           <div className="cta">
-            {buttons.map((button, i) => (
+            {buttons?.map((button, i) => (
               <Button
                 key={i}
                 to={button.to}
